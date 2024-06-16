@@ -37,7 +37,6 @@ const loadSeatingPlan = () => {
   console.log(time);
   const key = `${selectedDate} ${selectedTime}`;
 
-
   const currentDate = new Date();
   const selectedDateTime = new Date(`${selectedDate} ${selectedTime}`);
 
@@ -81,7 +80,6 @@ const loadSeatingPlan = () => {
     }
   }
 };
-
 
 const updateBookedSeats = () => {
   localStorage.setItem('bookedSeatsData', JSON.stringify(bookedSeatsData));
@@ -142,7 +140,6 @@ $('#date').on('change', () => {
   }
 });
 
-
 $('#time').on('change', loadSeatingPlan);
 
 $('#reserve-btn').on('click', () => {
@@ -167,6 +164,5 @@ $('#reserve-btn').on('click', () => {
     alert('Пожалуйста, выберите дату и время.');
   }
 });
-
 
 loadShowTimes();
